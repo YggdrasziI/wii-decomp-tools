@@ -66,6 +66,7 @@ Provenance
 `download_tool.py`, `transform_dep.py`, `decompctx.py` and `changes_fmt.py` come from
 [dtk-template](https://github.com/encounter/dtk-template) (CC0-1.0); `decompctx.py`
 and `changes_fmt.py` find the project root from `configure.py` instead of their
-parent folder. The other scripts were written in the projects that use them.
+parent folder, and `decompctx.py` reads the source of a precompiled header
+(`.pch++` / `.pch`) where a file includes its binary `.mch`. The other scripts were written in the projects that use them.
 
 License: CC0-1.0 (see `LICENSE`), except where a file says otherwise.

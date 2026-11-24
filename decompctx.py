@@ -52,6 +52,13 @@ def generate_prelude(defines) -> str:
 
 
 def import_h_file(in_file: str, r_path: str) -> str:
+    # A precompiled header (.mch) is a binary build output: read its source instead
+    if in_file.endswith(".mch"):
+        stem = in_file[: -len(".mch")]
+        for suffix in (".pch++", ".pch"):
+            found = import_h_file(stem + suffix, r_path)
+            if found:
+                return found
     rel_path = os.path.join(root_dir, r_path, in_file)
     if os.path.exists(rel_path):
         return import_c_file(rel_path)
