@@ -20,6 +20,7 @@ progress card, trace guard).
 Projects using it:
 
 - [mlab-decomp](https://github.com/YggdrasziI/mlab-decomp): Monster Lab (Wii)
+- [spyro-dotd-decomp](https://github.com/YggdrasziI/spyro-dotd-decomp): The Legend of Spyro: Dawn of the Dragon (Wii)
 
 Setup
 =====
